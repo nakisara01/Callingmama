@@ -45,51 +45,108 @@ class _HomeState extends State<Home> {
                       '   해당되는 분께 문자가 옵니다!!\n'
                       '         우리 어서 집에가요!!',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 20,
                     color: Colors.white,
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () async {
-                    await service.showScheduledNotification(
-                      id: 0,
-                      title: '엄마',
-                      body: '아들, 언제 들어와~ 빨리빨리 들어오지~?',
-                      seconds: 10,
-                    );
-                  },
-                  child: const Text('어머니께 연락 받기'),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.indigoAccent)
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100.0,
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.black, width: 3),
+                        //set border radius to 50% of square height and width
+                        image: DecorationImage(
+                          image: AssetImage("images/mommy.png"),
+                          fit: BoxFit.cover, //change image fill type
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 60,
+                      width: 200,
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          await service.showScheduledNotification(
+                            id: 0,
+                            title: '엄마',
+                            body: '아들, 언제 들어와~ 빨리빨리 들어오지~?',
+                            seconds: 10,
+                          );
+                        },
+                        child: const Text('어머니께 연락 받기'),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.indigoAccent),
+
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                ElevatedButton(
-                  onPressed: () async {
-                    await service.showScheduledNotification(
-                      id: 0,
-                      title: '아빠',
-                      body: '아들, 이제 들어와라 10분 준다',
-                      seconds: 10,
-                    );
-                  },
-                  child: const Text('아버지께 연락 받기'),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.indigoAccent)
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100.0,
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        //set border radius to 50% of square height and width
+                        image: DecorationImage(
+                          image: AssetImage("images/daddy.png"),
+                          fit: BoxFit.cover, //change image fill type
+                        ),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        await service.showScheduledNotification(
+                          id: 0,
+                          title: '아빠',
+                          body: '아들, 이제 들어와라 10분 준다',
+                          seconds: 10,
+                        );
+                      },
+                      child: const Text('아버지께 연락 받기'),
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.indigoAccent)
+                      ),
+                    ),
+                  ],
                 ),
-                ElevatedButton(
-                  onPressed: () async {
-                    await service.showScheduledNotification(
-                      id: 0,
-                      title: '내사랑',
-                      body: '자기야 집에 안가??',
-                      seconds: 10,
-                    );
-                  },
-                  child: const Text('연인에게 연락 받기'),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.indigoAccent)
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100.0,
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        //set border radius to 50% of square height and width
+                        image: DecorationImage(
+                          image: AssetImage("images/couple.png"),
+                          fit: BoxFit.cover, //change image fill type
+                        ),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        await service.showScheduledNotification(
+                          id: 0,
+                          title: '내사랑',
+                          body: '자기야 집에 안가??',
+                          seconds: 10,
+                        );
+                      },
+                      child: const Text('연인에게 연락 받기'),
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.indigoAccent)
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

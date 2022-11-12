@@ -43,7 +43,11 @@ class DiagonalPage extends StatelessWidget {
       //SizedBox(height: 200),
           Positioned(child:
             Center(
-              child: Text("아들~ 이면 왼쪽하단을 선택하슈\n딸~ 이면 오른쪽상단을 선택"),
+              child: Text("아들~ 이면 왼쪽하단을 선택하슈\n딸~ 이면 오른쪽상단을 선택",
+              style: TextStyle(fontFamily: 'DoHyeonRegular',
+              fontSize: 20
+              ),
+              ),
             ),
           ),
       Positioned(
