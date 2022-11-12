@@ -1,5 +1,6 @@
-import 'package:callingmama/main.dart';
+//import 'package:callingmama/main.dart';
 import 'package:flutter/material.dart';
+import '../home.dart';
 import 'Widget/ButtonEachTwoRightTriangleWithDivider.dart';
 
 class DiagonalPage extends StatelessWidget {
@@ -17,11 +18,11 @@ class DiagonalPage extends StatelessWidget {
         ),
         topRightTriangleOnTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => SecondScreen()));
+              context, MaterialPageRoute(builder: (context) => const Home()));
         },
         bottomLeftTriangleOnTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => SecondScreen()));
+              context, MaterialPageRoute(builder: (context) => const Home()));
         },
       ),
       Positioned(
@@ -34,7 +35,7 @@ class DiagonalPage extends StatelessWidget {
           child: GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondScreen()));
+                    MaterialPageRoute(builder: (context) => const Home()));
               },
               child: Image.asset('images/female.png')),
         ),
@@ -55,7 +56,7 @@ class DiagonalPage extends StatelessWidget {
           child: GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondScreen()));
+                    MaterialPageRoute(builder: (context) => const Home()));
               },
               child: Image.asset('images/male.png')),
         ),
