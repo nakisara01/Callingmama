@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Container(
         color: Color.fromRGBO(208, 227, 235, 1),
-        child: Image.asset('images/bongmisun.png', width: 100, height: 100,)
+        child: Image.asset('images/callingmamalogoreal.png', width: 100, height: 100,)
 
     );
   }

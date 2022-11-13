@@ -28,41 +28,72 @@ class DiagonalPage extends StatelessWidget {
       Positioned(
         left: 40,
         top: 10,
-        child: Container(
-          height: 200,
-          width: 200,
-          margin: EdgeInsets.all(100),
-          child: GestureDetector(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Home()));
-              },
-              child: Image.asset('images/female.png')),
+        child: Column(
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              margin: EdgeInsets.only(left: 100, right: 100, top:100),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Home()));
+                  },
+                  child: Image.asset('images/female.png')),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('여자는 여기 Click!'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.indigoAccent),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      //side: BorderSide(color: Colors.red) // border line color
+                    )
+                ),
+              ),
+            )
+          ],
         ),
       ),
       //SizedBox(height: 200),
-          Positioned(child:
-            Center(
-              child: Text("아들~ 이면 왼쪽하단을 선택하슈\n딸~ 이면 오른쪽상단을 선택",
-              style: TextStyle(fontFamily: 'DoHyeonRegular',
-              fontSize: 20
-              ),
+          /*Positioned(child:
+            Text("남자는 여기 Click!",
+            style: TextStyle(fontFamily: 'DoHyeonRegular',
+            fontSize: 20
+            ),
+            ),
+          ),*/
+      Positioned(
+        right: 30,
+        top: 400,
+        child: Column(
+          children: [            ElevatedButton(
+            onPressed: () {},
+            child: Text('남자는 여기 Click!'),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.indigoAccent),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    //side: BorderSide(color: Colors.red) // border line color
+                  )
               ),
             ),
           ),
-      Positioned(
-        right: 30,
-        top: 350,
-        child: Container(
-          height: 200,
-          width: 200,
-          margin: EdgeInsets.all(100),
-          child: GestureDetector(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Home()));
-              },
-              child: Image.asset('images/male.png')),
+            Container(
+              height: 200,
+              width: 200,
+              margin: EdgeInsets.only(left: 100, right: 100, bottom:100),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Home()));
+                  },
+                  child: Image.asset('images/male.png')),
+            ),
+          ],
         ),
       ),
     ]));
