@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.indigoAccent,
-       // title: const Text(''),
+        // title: const Text(''),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -34,8 +34,8 @@ class _HomeState extends State<Home> {
             decoration: BoxDecoration(
               color: Color.fromRGBO(208, 227, 235, 1),
             ),
-            height: 700,
-            width: 600,
+            height: double.infinity,
+            width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.only(bottom: 35.0),
               child: Column(
@@ -44,8 +44,8 @@ class _HomeState extends State<Home> {
                 children: [
                   const Text(
                     '문자를 받고 싶은 분을 누르시면\n'
-                        '  해당되는 분께 문자가 옵니다!\n'
-                        '         우리 어서 집에가요!!',
+                    '  해당되는 분께 문자가 옵니다!\n'
+                    '        우리 어서 집에가요!!',
                     style: TextStyle(
                       fontFamily: 'DoHyeonRegular',
                       fontSize: 22,
@@ -85,13 +85,14 @@ class _HomeState extends State<Home> {
                             },
                             child: Text('어머니께 연락 받기'),
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(Colors.indigoAccent),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Colors.indigoAccent),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                    //side: BorderSide(color: Colors.red) // border line color
-                                  )
-                              ),
+                                borderRadius: BorderRadius.circular(18.0),
+                                //side: BorderSide(color: Colors.red) // border line color
+                              )),
                             ),
                           ),
                         ),
@@ -131,14 +132,14 @@ class _HomeState extends State<Home> {
                             },
                             child: Text('아버지께 연락 받기'),
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(Colors.indigoAccent),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Colors.indigoAccent),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                    //side: BorderSide(color: Colors.red) // border line color
-                                  )
-                              ),
-
+                                borderRadius: BorderRadius.circular(18.0),
+                                //side: BorderSide(color: Colors.red) // border line color
+                              )),
                             ),
                           ),
                         ),
@@ -178,14 +179,14 @@ class _HomeState extends State<Home> {
                             },
                             child: Text('연인에게 연락 받기'),
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(Colors.indigoAccent),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Colors.indigoAccent),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                    //side: BorderSide(color: Colors.red) // border line color
-                                  )
-                              ),
-
+                                borderRadius: BorderRadius.circular(18.0),
+                                //side: BorderSide(color: Colors.red) // border line color
+                              )),
                             ),
                           ),
                         ),
@@ -200,5 +201,4 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-
 }

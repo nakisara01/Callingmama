@@ -57,14 +57,6 @@ class DiagonalPage extends StatelessWidget {
           ],
         ),
       ),
-      //SizedBox(height: 200),
-          /*Positioned(child:
-            Text("남자는 여기 Click!",
-            style: TextStyle(fontFamily: 'DoHyeonRegular',
-            fontSize: 20
-            ),
-            ),
-          ),*/
       Positioned(
         right: 30,
         top: 400,
